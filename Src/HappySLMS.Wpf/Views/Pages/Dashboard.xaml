@@ -5,14 +5,99 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:hc="https://handyorg.github.io/handycontrol"
     xmlns:local="clr-namespace:HappySLMS.Wpf.Views.Pages"
+    xmlns:lvc="clr-namespace:LiveChartsCore.SkiaSharpView.WPF;assembly=LiveChartsCore.SkiaSharpView.WPF"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:pages="clr-namespace:HappySLMS.Wpf.ViewModels.Pages"
     Title="Dashboard"
     d:Background="{StaticResource BackgroundBrush}"
+    d:DataContext="{d:DesignInstance Type=pages:DashboardViewModel}"
     d:DesignHeight="450"
     d:DesignWidth="800"
     mc:Ignorable="d">
+    <hc:TransitioningContentControl>
+        <ScrollViewer>
+            <hc:UniformSpacingPanel Margin="16" Orientation="Vertical">
 
-    <Grid>
-        <TextBlock Text="yiahddn" />
-    </Grid>
+
+                <ItemsControl ItemsSource="{Binding Items}">
+                    <ItemsControl.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <hc:UniformSpacingPanel
+                                ChildWrapping="Wrap"
+                                ItemWidth="{Binding ActualWidth, RelativeSource={RelativeSource AncestorType=ItemsControl}, Converter={StaticResource ItemWidthConverter}, ConverterParameter=4}"
+                                Orientation="Horizontal"
+                                Spacing="32" />
+                        </ItemsPanelTemplate>
+
+
+                    </ItemsControl.ItemsPanel>
+                    <ItemsControl.ItemTemplate>
+                        <DataTemplate>
+
+                            <Border
+                                Height="100"
+                                Background="White"
+                                CornerRadius="12"
+                                Style="{StaticResource BorderRegion}">
+                                <hc:UniformSpacingPanel Orientation="Horizontal" Spacing="16">
+                                    <Viewbox Width="64" Height="64">
+                                        <Path Data="{Binding PathData}" Fill="{StaticResource PrimaryBrush}" />
+                                    </Viewbox>
+                                    <hc:UniformSpacingPanel
+                                        Margin="0,10"
+                                        Orientation="Vertical"
+                                        Spacing="8">
+                                        <TextBlock Style="{StaticResource TextBlockTitle}" Text="{Binding Name}" />
+                                        <TextBlock Style="{StaticResource TextBlockLargeBold}" Text="{Binding Value}" />
+                                    </hc:UniformSpacingPanel>
+                                </hc:UniformSpacingPanel>
+                            </Border>
+
+                        </DataTemplate>
+                    </ItemsControl.ItemTemplate>
+                </ItemsControl>
+                <!--<lvc:CartesianChart Series="{Binding Series}" />-->
+                <!--<Grid Height="300">
+                    <lvc:CartesianChart Series="{Binding Series}" />
+                </Grid>-->
+                <Grid Margin="0,10">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <Border Grid.Column="0" Margin="20,0">
+                        <StackPanel Orientation="Vertical">
+
+                            <TextBlock Text="设备在线率" />
+                            <Viewbox>
+                                <Grid Width="400" Height="300">
+                                    <lvc:PieChart LegendPosition="Right" Series="{Binding EquipmentOnlineSeries}" />
+
+                                </Grid>
+                            </Viewbox>
+
+                        </StackPanel>
+                    </Border>
+                    <Border Grid.Column="1" Margin="20,0">
+                        <StackPanel Orientation="Vertical">
+
+                            <TextBlock Text="设备告警率" />
+                            <Viewbox>
+                                <Grid Width="400" Height="300">
+                                    <lvc:PieChart LegendPosition="Right" Series="{Binding EquipmentAlarmSeries}" />
+
+                                </Grid>
+                            </Viewbox>
+
+                        </StackPanel>
+                    </Border>
+
+
+                </Grid>
+
+            </hc:UniformSpacingPanel>
+
+
+        </ScrollViewer>
+    </hc:TransitioningContentControl>
 </Page>

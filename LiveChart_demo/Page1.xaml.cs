@@ -1,6 +1,4 @@
-﻿using HappySLMS.Wpf.ViewModels.Pages;
-using Microsoft.Extensions.DependencyInjection;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,17 +13,17 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace HappySLMS.Wpf.Views.Pages
+namespace LiveChart_demo
 {
     /// <summary>
-    /// LogPage.xaml 的交互逻辑
+    /// Page1.xaml 的交互逻辑
     /// </summary>
-    public partial class LogPage : Page
+    public partial class Page1 : Page
     {
-        public LogPage()
+        public Page1()
         {
             InitializeComponent();
-            DataContext = App.Services.GetRequiredService<LogPageViewModel>();
+            DataContext = new ViewModel();
         }
     }
 }

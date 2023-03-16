@@ -1,17 +1,17 @@
-﻿<Page
-    x:Class="HappySLMS.Wpf.Views.Pages.LogPage"
+﻿<Window
+    x:Class="LiveChart_demo.MainWindow"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-    xmlns:local="clr-namespace:HappySLMS.Wpf.Views.Pages"
+    xmlns:local="clr-namespace:LiveChart_demo"
     xmlns:lvc="clr-namespace:LiveChartsCore.SkiaSharpView.WPF;assembly=LiveChartsCore.SkiaSharpView.WPF"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    xmlns:pages="clr-namespace:HappySLMS.Wpf.ViewModels.Pages"
-    Title="LogPage"
-    d:DataContext="{d:DesignInstance Type=pages:LogPageViewModel}"
-    d:DesignHeight="450"
-    d:DesignWidth="800"
+    Title="MainWindow"
+    Width="800"
+    Height="450"
+    Background="Wheat"
+    Loaded="Window_Loaded"
     mc:Ignorable="d">
-    <lvc:CartesianChart Series="{Binding Series}" />
+    <Frame x:Name="frame" />
 
-</Page>
+</Window>
