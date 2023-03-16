@@ -27,8 +27,8 @@ namespace HappySLMS.Wpf.ViewModels.Pages
                     //DataLabelsPaint = new SolidColorPaint(SKColors.Black) {FontFamily= LiveChartsSkiaSharp.MatchChar('汉') },                    
 
                 },
-                new PieSeries<double> 
-                { 
+                new PieSeries<double>
+                {
                     Name="离线设备",
                     Values = new double[] { 20 } ,
                     //DataLabelsPosition = LiveChartsCore.Measure.PolarLabelsPosition.End,
@@ -38,14 +38,14 @@ namespace HappySLMS.Wpf.ViewModels.Pages
 
                  
                 },
-               
+
 
             };
 
 
         public ISeries[] EquipmentAlarmSeries { get; set; }
-    = new ISeries[]
-    {
+        = new ISeries[]
+        {
                 new PieSeries<double>
                 {
                     Name="正常",
@@ -76,7 +76,7 @@ namespace HappySLMS.Wpf.ViewModels.Pages
                     //DataLabelsFormatter = point => $"离线设备",
                     //DataLabelsPaint = new SolidColorPaint(SKColors.Black) {FontFamily= LiveChartsSkiaSharp.MatchChar('汉') },                            
                 },
-               
+
 
     };
 
