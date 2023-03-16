@@ -10,8 +10,8 @@
     xmlns:model="clr-namespace:HappySLMS.Wpf.Models"
     xmlns:viewmodels="clr-namespace:HappySLMS.Wpf.ViewModels"
     Title="MainWindow"
-    Width="1080"
-    Height="600"
+    Width="1120"
+    Height="700"
     d:DataContext="{d:DesignInstance Type=viewmodels:MainWindowViewModel}"
     Background="{StaticResource BackgroundBrush}"
     WindowStartupLocation="CenterScreen"
@@ -176,6 +176,7 @@
             <Grid Grid.Row="0" />
             <Grid Grid.Row="1">
                 <Frame x:Name="frameContent" NavigationUIVisibility="Hidden" />
+
             </Grid>
         </Grid>
     </Grid>

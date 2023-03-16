@@ -1,4 +1,6 @@
-﻿using System;
+﻿using HappySLMS.Wpf.ViewModels.Pages;
+using Microsoft.Extensions.DependencyInjection;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -16,13 +18,14 @@ using System.Windows.Shapes;
 namespace HappySLMS.Wpf.Views.Pages
 {
     /// <summary>
-    /// LogPage.xaml 的交互逻辑
+    /// Dashboard.xaml 的交互逻辑
     /// </summary>
-    public partial class LogPage : Page
+    public partial class Dashboard : Page
     {
-        public LogPage()
+        public Dashboard()
         {
             InitializeComponent();
+            DataContext = App.Services.GetRequiredService<DashboardViewModel>();
         }
     }
 }

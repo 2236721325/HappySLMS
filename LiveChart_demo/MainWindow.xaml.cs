@@ -1,5 +1,4 @@
-﻿using HandyControl.Tools.Extension;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -14,23 +13,21 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace handynnde
+namespace LiveChart_demo
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
-    public partial class MainWindow : HandyControl.Controls.Window
+    public partial class MainWindow : Window
     {
         public MainWindow()
         {
             InitializeComponent();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            App.Current.MainWindow = new Window1();
-            App.Current.MainWindow.Show();
-            this.Close();
+            frame.Navigate(new Page1());
         }
     }
 }

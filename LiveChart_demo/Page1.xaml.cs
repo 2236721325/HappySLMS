@@ -13,16 +13,17 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace HappySLMS.Wpf.Views.Pages
+namespace LiveChart_demo
 {
     /// <summary>
-    /// Dashboard.xaml 的交互逻辑
+    /// Page1.xaml 的交互逻辑
     /// </summary>
-    public partial class Dashboard : Page
+    public partial class Page1 : Page
     {
-        public Dashboard()
+        public Page1()
         {
             InitializeComponent();
+            DataContext = new ViewModel();
         }
     }
 }
