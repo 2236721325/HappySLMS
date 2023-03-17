@@ -1,9 +1,5 @@
 ﻿using CommunityToolkit.Mvvm.Messaging;
 using HappySLMS.Wpf.Messages;
-using HappySLMS.Wpf.Utility;
-using HappySLMS.Wpf.ViewModels;
-using HappySLMS.Wpf.Views.Pages;
-using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,23 +13,19 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Media.Media3D;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace HappySLMS.Wpf.Views
+namespace HappySLMS.Wpf.Views.Sprites
 {
     /// <summary>
-    /// MainWindow.xaml 的交互逻辑
+    /// GameSprite.xaml 的交互逻辑
     /// </summary>
-    public partial class MainWindow : HandyControl.Controls.Window
+    public partial class GameSprite 
     {
-        public MainWindow()
+        public GameSprite()
         {
             InitializeComponent();
-            DataContext = App.Services.GetRequiredService<MainWindowViewModel>();
-            this.KeyDown += (s, e) => WeakReferenceMessenger.Default.Send(new KeyDownMessage(e));
-
-
-           
         }
     }
 }

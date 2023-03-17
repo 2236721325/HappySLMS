@@ -32,7 +32,7 @@ namespace HappySLMS.Wpf.ViewModels
 
         void InitData()
         {
-            navItems = new List<NavigationMenuItem>
+            NavItems = new List<NavigationMenuItem>
             {
                 new NavigationMenuItem("仪表盘", typeof(Dashboard), "Dashboard"),
                 new NavigationMenuItem("用户管理", typeof(UserManagement), "UserManagement"),
@@ -40,10 +40,12 @@ namespace HappySLMS.Wpf.ViewModels
                 new NavigationMenuItem("设备管理", typeof(EquipmentManagement), "EquipmentManagement"),
                 new NavigationMenuItem("报表导出", typeof(DataExport), "DataExport"),
                 new NavigationMenuItem("系统日志", typeof(LogPage), "Log"),
-                new NavigationMenuItem("系统设置", typeof(Settings), "Settings")
+                new NavigationMenuItem("系统设置", typeof(Settings), "Settings"),
+                new NavigationMenuItem("游戏", typeof(GamePage), "GamePage")
+
             };
 
-            SelectedItem = navItems[index: 0];
+            SelectedItem = NavItems[index: 0];
 
 
         }
