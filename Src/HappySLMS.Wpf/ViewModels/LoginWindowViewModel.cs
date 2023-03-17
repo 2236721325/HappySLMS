@@ -4,6 +4,8 @@ using Microsoft.Extensions.DependencyInjection;
 
 namespace HappySLMS.Wpf.ViewModels
 {
+
+
     public partial class LoginWindowViewModel : ViewModelBase
     {
 
