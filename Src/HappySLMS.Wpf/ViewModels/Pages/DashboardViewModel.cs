@@ -25,7 +25,6 @@ namespace HappySLMS.Wpf.ViewModels.Pages
                     Name="在线设备" ,
                     Values = new double[] { 80 } ,
                     //DataLabelsPaint = new SolidColorPaint(SKColors.Black) {FontFamily= LiveChartsSkiaSharp.MatchChar('汉') },                    
-
                 },
                 new PieSeries<double>
                 {
@@ -34,9 +33,6 @@ namespace HappySLMS.Wpf.ViewModels.Pages
                     //DataLabelsPosition = LiveChartsCore.Measure.PolarLabelsPosition.End,
                     //DataLabelsFormatter = point => $"离线设备",
                     //DataLabelsPaint = new SolidColorPaint(SKColors.Black) {FontFamily= LiveChartsSkiaSharp.MatchChar('汉') },                            
-
-
-                 
                 },
 
 
