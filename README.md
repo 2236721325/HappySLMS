@@ -17,3 +17,7 @@ add 🏀 and 🐔
 ## Reference
  IotSharp Address-> http://demo.iotsharp.net/
  Password-> P@ssw0rd
+
+## Description
+	this project use HandyControl and LiveChart Nuget Package
+	target Framework is .net6
