@@ -16,7 +16,7 @@ namespace HappySLMS.Wpf.ViewModels.Pages
         public EquipmentManagementViewModel()
         {
             DataList = new List<EquipmentInfo>();
-            for (int i = 0; i < 100; i++)
+            for (int i = 0; i < 15; i++)
             {
                 DataList.Add(new EquipmentInfo()
                 {
