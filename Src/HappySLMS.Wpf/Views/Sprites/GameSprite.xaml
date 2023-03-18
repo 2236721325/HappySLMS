@@ -9,9 +9,16 @@
     Background="Transparent"
     mc:Ignorable="d">
     <Border x:Name="border">
-        <Viewbox Width="50" Height="50">
-            <Path Data="{StaticResource GamePage}" Fill="#f06632" />
-        </Viewbox>
+        <StackPanel Orientation="Vertical">
+            <TextBlock
+                FontSize="200"
+                Style="{StaticResource TextBlockDefaultPrimary}"
+                Text="🐔" />
+            <Viewbox Width="300" Height="300">
+                <Path Data="{StaticResource GamePage}" Fill="#f06632" />
+            </Viewbox>
+        </StackPanel>
+
     </Border>
     <Button
         Width="22"
