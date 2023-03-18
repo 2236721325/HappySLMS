@@ -1,4 +1,6 @@
-﻿using System;
+﻿using HappySLMS.Wpf.ViewModels.Pages;
+using Microsoft.Extensions.DependencyInjection;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +25,7 @@ namespace HappySLMS.Wpf.Views.Pages
         public EquipmentManagement()
         {
             InitializeComponent();
+            DataContext = App.Services.GetRequiredService<EquipmentManagementViewModel>();
         }
     }
 }

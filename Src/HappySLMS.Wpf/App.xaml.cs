@@ -32,6 +32,7 @@ namespace HappySLMS.Wpf
 
             service.AddTransient<DataExport>();
             service.AddTransient<EquipmentManagement>();
+            service.AddTransient<EquipmentManagementViewModel>();
             service.AddTransient<LogPage>();
             service.AddTransient<LogPageViewModel>();
 
