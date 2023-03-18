@@ -46,7 +46,6 @@
                 <Grid.RowDefinitions>
                     <RowDefinition Height="*" />
                     <RowDefinition Height="Auto" />
-
                 </Grid.RowDefinitions>
                 <DataGrid
                     Grid.Row="0"
@@ -62,7 +61,10 @@
                             <Setter Property="HorizontalContentAlignment" Value="Center" />
 
                         </Style>
+
                     </DataGrid.ColumnHeaderStyle>
+
+
 
                     <!--<DataGrid.RowHeaderTemplate>
                     <DataTemplate>

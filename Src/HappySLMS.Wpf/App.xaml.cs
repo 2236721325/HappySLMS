@@ -39,6 +39,7 @@ namespace HappySLMS.Wpf
             service.AddTransient<MonitorPage>();
             service.AddTransient<Settings>();
             service.AddTransient<UserManagement>();
+            service.AddTransient<UserManagementViewModel>();
             service.AddTransient<GamePage>();
             service.AddTransient<GamePageViewModel>();
 

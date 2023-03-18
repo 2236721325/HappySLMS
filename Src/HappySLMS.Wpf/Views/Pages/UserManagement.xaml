@@ -6,13 +6,129 @@
     xmlns:hc="https://handyorg.github.io/handycontrol"
     xmlns:local="clr-namespace:HappySLMS.Wpf.Views.Pages"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:pages="clr-namespace:HappySLMS.Wpf.ViewModels.Pages"
     Title="UserManagement"
+    d:DataContext="{d:DesignInstance Type=pages:UserManagementViewModel}"
     d:DesignHeight="450"
     d:DesignWidth="800"
     mc:Ignorable="d">
-    <Grid Margin="25">
-        
-    </Grid>
+    <hc:TransitioningContentControl>
+        <Grid Margin="25">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <hc:UniformSpacingPanel
+                Grid.Row="0"
+                Height="30"
+                HorizontalAlignment="Left"
+                Orientation="Horizontal"
+                Spacing="24">
+                <TextBox
+                    Width="300"
+                    hc:InfoElement.Title="名称"
+                    hc:InfoElement.TitlePlacement="Left"
+                    Style="{StaticResource TextBoxExtend}"
+                    Text="{Binding SearchName}" />
+                <Button
+                    hc:IconElement.Geometry="{StaticResource SearchGeometry}"
+                    Content="搜索"
+                    Style="{StaticResource ButtonPrimary}" />
+                <Button hc:IconElement.Geometry="{StaticResource RotateLeftGeometry}" Content="重置" />
 
-   
+            </hc:UniformSpacingPanel>
+            <Grid Grid.Row="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="Auto" />
+
+                </Grid.RowDefinitions>
+                <DataGrid
+                    Grid.Row="0"
+                    hc:DataGridAttach.CanUnselectAllWithBlankArea="True"
+                    hc:DataGridAttach.ShowRowNumber="True"
+                    AutoGenerateColumns="False"
+                    BorderThickness="0"
+                    HeadersVisibility="All"
+                    ItemsSource="{Binding DataList}"
+                    RowHeaderWidth="60">
+                    <DataGrid.ColumnHeaderStyle>
+                        <Style BasedOn="{StaticResource DataGridColumnHeaderStyle}" TargetType="DataGridColumnHeader">
+                            <Setter Property="HorizontalContentAlignment" Value="Center" />
+
+                        </Style>
+                    </DataGrid.ColumnHeaderStyle>
+
+                    <!--<DataGrid.RowHeaderTemplate>
+                    <DataTemplate>
+                        <CheckBox IsChecked="{Binding IsSelected, RelativeSource={RelativeSource AncestorType=DataGridRow}}" />
+                    </DataTemplate>
+                </DataGrid.RowHeaderTemplate>-->
+                    <DataGrid.Columns>
+                        <DataGridTextColumn
+                            Width="300"
+                            Binding="{Binding Id}"
+                            CanUserResize="False"
+                            CanUserSort="False"
+                            Header="Id"
+                            IsReadOnly="True" />
+                        <DataGridTextColumn
+                            Width="75"
+                            Binding="{Binding Role}"
+                            CanUserSort="False"
+                            Header="角色"
+                            IsReadOnly="True" />
+                        <DataGridTextColumn
+                            Binding="{Binding Name}"
+                            CanUserSort="False"
+                            Header="名称"
+                            IsReadOnly="True" />
+                        <DataGridTextColumn
+                            Binding="{Binding Email}"
+                            CanUserSort="False"
+                            Header="邮件"
+                            IsReadOnly="True" />
+                        <DataGridTextColumn
+                            Binding="{Binding Phone}"
+                            CanUserSort="False"
+                            Header="电话"
+                            IsReadOnly="True" />
+
+                        <DataGridTemplateColumn
+                            Width="*"
+                            CanUserResize="False"
+                            Header="操作">
+                            <DataGridTemplateColumn.CellTemplate>
+                                <DataTemplate>
+                                    <StackPanel HorizontalAlignment="Center" Orientation="Horizontal">
+                                        <Button Content="编辑" Style="{StaticResource ButtonPrimary}" />
+                                        <Button
+                                            Margin="15,0,0,0"
+                                            Content="删除"
+                                            Style="{StaticResource ButtonDanger}" />
+                                    </StackPanel>
+                                </DataTemplate>
+                            </DataGridTemplateColumn.CellTemplate>
+                        </DataGridTemplateColumn>
+                    </DataGrid.Columns>
+                </DataGrid>
+                <StackPanel Grid.Row="1" Orientation="Horizontal">
+                    <TextBlock
+                        Margin="10,0,0,0"
+                        VerticalAlignment="Center"
+                        Style="{StaticResource TextBlockSubTitle}"
+                        Text="共35页" />
+                    <hc:Pagination
+                        Margin="30,0,0,0"
+                        IsJumpEnabled="True"
+                        MaxPageCount="10"
+                        PageIndex="5" />
+                </StackPanel>
+
+            </Grid>
+
+        </Grid>
+    </hc:TransitioningContentControl>
+
+
 </Page>
