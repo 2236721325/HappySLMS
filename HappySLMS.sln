@@ -6,6 +6,9 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HappySLMS.Wpf", "Src\HappySLMS.Wpf\HappySLMS.Wpf.csproj", "{6E3E7541-DD50-421B-A9FA-4C08CC228A51}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{AB0E740A-BF3F-4FC4-AD91-F2AAF362D391}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LiveChart_demo", "LiveChart_demo\LiveChart_demo.csproj", "{A232DC43-91A6-4376-BB08-4724D02217BE}"
 EndProject
