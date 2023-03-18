@@ -8,7 +8,7 @@ add dashboard
 add equipment management 
 ![设备管理](https://github.com/2236721325/HappySLMS/blob/master/ScreenShot/设备管理.png)
 add user management 
-![用户管理](https://github.com/2236721325/HappySLMS/blob/master/ScreenShot/UserMangement.png)
+![用户管理](https://github.com/2236721325/HappySLMS/blob/master/ScreenShot/UserManagement.png)
 add 🏀 and 🐔
 ![篮球和鸡🐔](https://github.com/2236721325/HappySLMS/blob/master/ScreenShot/Game.png)
 
